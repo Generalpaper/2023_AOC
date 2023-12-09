@@ -35,17 +35,29 @@ func day7() {
 				jCount++
 			}
 			cCount[r]++
-			if cCount[r] > 3 {
-				longest = 4
-			} else if cCount[r] > 2 {
-				longest = 3
+			if cCount[r] > longest {
+				longest = cCount[r]
 			}
 		}
+		// alternative extra hard to understand solution
+		// lc := len(cCount) - 1
+		// if lc == 1 {
+		// 	lc++
+		// 	if longest == 4 || jCount > 1 || jCount == 1 && longest == 3 {
+		// 		lc--
+		// 	}
+		// } else if lc > 1 {
+		// 	lc += 2
+		// 	if lc == 3 && jCount > 0 {
+		// 		lc--
+		// 	}
+		// }
+		// tierSlice[lc] = append(tierSlice[lc], c)
 		lc := len(cCount)
-		if jCount > 0 && jCount != 5 {
+		if jCount != 0 {
 			lc--
 		}
-		if lc == 1 {
+		if lc == 1 || jCount == 5 {
 			tierSlice[0] = append(tierSlice[0], c)
 		} else if lc == 2 {
 			if longest == 4 || jCount > 1 || jCount == 1 && longest == 3 {
@@ -107,9 +119,10 @@ func day7() {
 	// }
 	// fmt.Println(rank)
 	fmt.Println(total)
-	// too low 249495725
+	// correct 249666369
 }
 
+// part 1
 // func day7() {
 // 	content, err := os.ReadFile("inputs/7.txt")
 // 	if err != nil {
