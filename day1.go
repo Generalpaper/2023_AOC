@@ -1009,16 +1009,17 @@ func day1() {
 	qbfvpnxsix3four1lfone
 	9one9pjtnncsqzhcszp5`
 	total := 0
-	// strink = strings.Replace(strink, "zero", "0", 0)
-	// strink = strings.Replace(strink, "one", "1", -1)
-	// strink = strings.Replace(strink, "two", "2", -1)
-	// strink = strings.Replace(strink, "three", "3", -1)
-	// strink = strings.Replace(strink, "four", "4", -1)
-	// strink = strings.Replace(strink, "five", "5", -1)
-	// strink = strings.Replace(strink, "six", "6", -1)
-	// strink = strings.Replace(strink, "seven", "7", -1)
-	// strink = strings.Replace(strink, "eight", "8", -1)
-	// strink = strings.Replace(strink, "nine", "9", -1)
+	// some smort guy online thought of zero to z0ro stuff
+	// strink = strings.Replace(strink, "z0ro", "0", 0)
+	// strink = strings.Replace(strink, "o1e", "1", -1)
+	// strink = strings.Replace(strink, "t2o", "2", -1)
+	// strink = strings.Replace(strink, "th3ee", "3", -1)
+	// strink = strings.Replace(strink, "f4ur", "4", -1)
+	// strink = strings.Replace(strink, "f5ve", "5", -1)
+	// strink = strings.Replace(strink, "s6x", "6", -1)
+	// strink = strings.Replace(strink, "se7en", "7", -1)
+	// strink = strings.Replace(strink, "ei8ht", "8", -1)
+	// strink = strings.Replace(strink, "n9ne", "9", -1)
 	wordSlice := strings.Split(strink, "\n")
 	for _, word := range wordSlice {
 		num1, num2 := 11, 11
